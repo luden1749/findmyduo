@@ -1,6 +1,6 @@
 import React from "react";
-import Layout from "../components/Layout";
 import Link from "next/link";
+import Layout from "../components/Layout"; // ✅ chemin corrigé (pas de '@/')
 import { motion } from "framer-motion";
 import {
   Sparkles,
@@ -10,11 +10,11 @@ import {
   Zap,
   Star,
   ArrowRight,
-  CheckCircle2,
+  CheckCircle2
 } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import { Button } from "../components/ui/button";
+import { Card, CardContent } from "../components/ui/card";
+import { Badge } from "../components/ui/badge";
 
 export default function Home() {
   const stats = [
@@ -27,22 +27,19 @@ export default function Home() {
     {
       number: "01",
       title: "Crée ton profil gamer",
-      description:
-        "Renseigne ton pseudo LoL, ton rang, tes rôles préférés et ton style de jeu",
+      description: "Renseigne ton pseudo LoL, ton rang, tes rôles préférés et ton style de jeu",
       icon: Users,
     },
     {
       number: "02",
       title: "Trouve des partenaires compatibles",
-      description:
-        "Notre IA analyse des milliers de profils pour te proposer les meilleurs matchs",
+      description: "Notre IA analyse des milliers de profils pour te proposer les meilleurs matchs",
       icon: Sparkles,
     },
     {
       number: "03",
       title: "Lance une partie équilibrée",
-      description:
-        "Joue avec des coéquipiers de ton niveau dans un environnement positif",
+      description: "Joue avec des coéquipiers de ton niveau dans un environnement positif",
       icon: TrendingUp,
     },
   ];
@@ -77,7 +74,6 @@ export default function Home() {
 
   return (
     <Layout>
-      {/* ✅ Tout le contenu de la page d'accueil est affiché à droite du menu */}
       <div className="min-h-screen bg-gradient-to-b from-gray-900 via-blue-900/10 to-gray-900">
         {/* --- HERO --- */}
         <section className="relative overflow-hidden">
@@ -107,8 +103,7 @@ export default function Home() {
 
               <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
                 Créez ou rejoignez une équipe, trouvez des adversaires de votre
-                niveau, et participez à des matchs amicaux sur League of
-                Legends.
+                niveau, et participez à des matchs amicaux sur League of Legends.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6">
@@ -140,9 +135,7 @@ export default function Home() {
                       <div className="text-3xl font-bold text-white mb-1">
                         {stat.value}
                       </div>
-                      <div className="text-sm text-gray-400">
-                        {stat.label}
-                      </div>
+                      <div className="text-sm text-gray-400">{stat.label}</div>
                     </CardContent>
                   </Card>
                 ))}
