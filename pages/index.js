@@ -1,5 +1,5 @@
 import React from "react";
-import Layout from "@/components/Layout"; // ✅ On utilise le Layout ici
+import Layout from "../components/Layout";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
