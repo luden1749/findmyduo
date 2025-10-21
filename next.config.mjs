@@ -1,13 +1,11 @@
-// next.config.mjs
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  reactStrictMode: true,
   eslint: {
-    ignoreDuringBuilds: true, // ✅ désactive ESLint au moment du build
+    // ✅ Empêche le build de planter à cause d'erreurs ESLint
+    ignoreDuringBuilds: true,
   },
-  typescript: {
-    ignoreBuildErrors: true, // ✅ empêche aussi les erreurs TS de bloquer la build
-  },
+  pageExtensions: ['js', 'jsx'],
 };
 
 export default nextConfig;
